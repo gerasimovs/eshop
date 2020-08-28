@@ -1,0 +1,23 @@
+{
+  "name": "spa-eshop",
+  "version": "1.0.0",
+  "description": "SPA E-Shop",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "buefy": "^0.9.2",
+    "vue": "^2.6.12"
+  },
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.30.2",
+    "@vue/babel-preset-app": "^4.5.4",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.0",
+    "vue-loader": "^15",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
