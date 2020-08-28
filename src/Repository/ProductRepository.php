@@ -25,12 +25,13 @@ class ProductRepository extends ServiceEntityRepository
      */
     public function findOneByRandom(): ?Product
     {
+        $count = $this->createQueryBuilder('p')->select('count(p.id)')->getQuery()->getSingleScalarResult();
+
         return $this->createQueryBuilder('p')
-            ->orderBy('RANDOM()')
+            ->setFirstResult(rand(1, $count))
             ->setMaxResults(1)
             ->getQuery()
-            ->getOneOrNullResult()
-        ;
+            ->getOneOrNullResult();
     }
 
     public function getQuery()
